@@ -11,13 +11,23 @@
     <groupId>cn.chendahai</groupId>
     <artifactId>spring-cloud-dubbo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>spring-cloud-dubbo</name>
     <description>spring-cloud-dubbo</description>
+
+    <modules>
+        <module>provider-log</module>
+        <module>provider-message</module>
+        <module>consumer-lucky</module>
+        <module>base-core</module>
+    </modules>
+
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>2021.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

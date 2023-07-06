@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: cloud-consumer-lucky
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.16.8.201:8848
+  main:
+    allow-circular-references: true
+#    allow-bean-definition-overriding: true
+
+server:
+  port: 5051
+
+
+
+dubbo:
+  registry:
+    address: spring-cloud://localhost
+  #    protocol: zookeeper
+  #    address: chendahai.cn:2181
+  protocol:
+    name: dubbo
+    port: -1
+  #  version: 1.0.1
+  scan:
+    base-packages: cn.chendahai.lucky
+  cloud:
+    subscribed-services: cloud-provider-log
