@@ -1,0 +1,11 @@
+#spring:
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 192.16.8.201:8848
+#      #        namespace: dev
+#      config:
+#        server-addr: 192.16.8.201:8848
+#        group: DEFAULT_GROUP
+#        prefix: cloud-provider-log
+#        file-extension: yaml
