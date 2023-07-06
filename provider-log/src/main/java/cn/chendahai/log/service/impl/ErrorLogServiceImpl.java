@@ -1,10 +1,12 @@
 package cn.chendahai.log.service.impl;
 
+import cn.chendahai.log.config.DynamicConfig;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Service;
 import cn.chendahai.entity.ErrorLog;
 import cn.chendahai.service.ErrorLogService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +20,9 @@ public class ErrorLogServiceImpl implements ErrorLogService {
 
     @Value("${test.demo}")
     private String testDemo;
+
+    @Autowired
+    DynamicConfig dynamicConfig;
 
 
     @Override
@@ -36,6 +41,7 @@ public class ErrorLogServiceImpl implements ErrorLogService {
     public void asyncSendMsg(ErrorLog errorLog) {
         System.out.println("port:" + port);
         System.out.println("testDemo:" + testDemo);
+        System.out.println("dynamicConfig testDemo:" + dynamicConfig.getTestDemo());
         System.out.println("asyncSendMsg:" + JSONObject.toJSONString(errorLog));
     }
 }

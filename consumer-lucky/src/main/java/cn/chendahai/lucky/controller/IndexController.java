@@ -1,4 +1,4 @@
-package cn.chendahai.lucky.web.controller;
+package cn.chendahai.lucky.controller;
 
 import cn.chendahai.entity.ErrorLog;
 import cn.chendahai.service.ErrorLogService;
@@ -20,6 +20,15 @@ public class IndexController {
 
     @DubboReference
     private ErrorLogService errorLogService;
+
+    @GetMapping("/ccc")
+    public String ccc() {
+        ErrorLog errorLog = new ErrorLog();
+        errorLog.setName("dahai");
+        errorLogService.asyncSendMsg(errorLog);
+        System.out.println(123);
+        return errorLog.getName();
+    }
 
 
     @GetMapping("/bbb")
@@ -48,14 +57,6 @@ public class IndexController {
             System.out.println("completableFuture:" + oo);
         }
         return "bbb";
-    }
-
-    @GetMapping("/ccc")
-    public void ccc() {
-        ErrorLog errorLog = new ErrorLog();
-        errorLog.setName("dahai");
-        errorLogService.asyncSendMsg(errorLog);
-        System.out.println(123);
     }
 
 

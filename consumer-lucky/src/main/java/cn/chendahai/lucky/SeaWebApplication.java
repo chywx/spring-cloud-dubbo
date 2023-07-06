@@ -1,4 +1,4 @@
-package cn.chendahai.lucky.web;
+package cn.chendahai.lucky;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
