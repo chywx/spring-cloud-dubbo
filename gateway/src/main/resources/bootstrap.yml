@@ -2,7 +2,7 @@ spring:
   profiles:
     active: @profile.name@
   application:
-    name: cloud-consumer-lucky
+    name: gateway
   main:
     allow-circular-references: true
   cloud:
