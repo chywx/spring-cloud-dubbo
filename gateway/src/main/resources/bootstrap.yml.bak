@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active: @profile.name@
+  application:
+    name: cloud-consumer-lucky
+  main:
+    allow-circular-references: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: @config.server-addr@
+      # dataId=${spring.application.name}-${spring.profiles.active}.${file-extention}
+      config:
+        server-addr: @config.server-addr@
+        group: @config.group@
+        file-extension: yaml
+        prefix: ${spring.application.name}

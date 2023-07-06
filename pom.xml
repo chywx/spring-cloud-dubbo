@@ -20,6 +20,7 @@
         <module>provider-message</module>
         <module>consumer-lucky</module>
         <module>base-core</module>
+        <module>gateway</module>
     </modules>
 
     <properties>
