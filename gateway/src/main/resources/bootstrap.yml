@@ -14,4 +14,3 @@ spring:
         server-addr: @config.server-addr@
         group: @config.group@
         file-extension: yaml
-        prefix: ${spring.application.name}

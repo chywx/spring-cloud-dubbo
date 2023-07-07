@@ -12,6 +12,24 @@ sh startup.sh -m standalone
 http://192.16.8.201:8848/nacos
 账号密码都是nacos
 
+# 聚合项目打包
+## 默认打包
+`mvn clean package`
+## 指定profile打包
+`mvn clean package -Pprod`
+## 指定模块打包
+`mvn clean package -pl provider-log -am -amd -Pprod`
+## 参数介绍
+>-am是引入指定模块的依赖也编译
+>
+>-amd是引入依赖的依赖也进行编译
+> 
+> -pl是指定打包module
+> 
+> -Pprod 是指定打包的id为prod的profile
+
+
+
 # 版本对应关系
 https://blog.csdn.net/weixin_43702146/article/details/127302612
 
