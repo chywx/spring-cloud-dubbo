@@ -1,8 +1,9 @@
+
 spring:
   profiles:
     active: @profile.name@
   application:
-    name: gateway
+    name: cloud-gateway
   main:
     allow-circular-references: true
   cloud:
@@ -14,3 +15,4 @@ spring:
         server-addr: @config.server-addr@
         group: @config.group@
         file-extension: yaml
+debug: true

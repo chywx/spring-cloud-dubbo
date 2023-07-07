@@ -21,6 +21,7 @@
         <module>consumer-lucky</module>
         <module>base-core</module>
         <module>gateway</module>
+        <module>socket-io</module>
     </modules>
 
     <properties>
