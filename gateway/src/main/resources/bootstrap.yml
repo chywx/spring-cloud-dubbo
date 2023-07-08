@@ -7,6 +7,18 @@ spring:
   main:
     allow-circular-references: true
   cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowedOrigins: "*" # 跨域处理 允许所有的域
+            allowed-headers: "*" #跨域设置
+            allowedMethods: # 支持的方法
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
     nacos:
       discovery:
         server-addr: @config.server-addr@

@@ -1,4 +1,4 @@
-package cn.chendahai.gateway;
+package cn.chendahai.gateway.test;
 
 import com.alibaba.nacos.api.exception.NacosException;
 import com.alibaba.nacos.api.naming.NamingFactory;
@@ -21,6 +21,8 @@ public class NamingExample {
 
         naming.registerInstance("chy-websocket", "192.16.21.102", 8099, "TEST1");
 
+        naming.registerInstance("chy-socketio", "192.16.21.102", 2468, "socketio");
+
 //        naming.registerInstance("chy-websocket", "2.2.2.2", 9999, "DEFAULT");
 
         System.out.println(naming.getAllInstances("chy-websocket"));
@@ -36,6 +38,12 @@ public class NamingExample {
                 System.out.println(((NamingEvent) event).getInstances());
             }
         });
+
+        try {
+            Thread.sleep(1000000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

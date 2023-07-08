@@ -29,10 +29,17 @@ http://192.16.8.201:8848/nacos
 > -Pprod 是指定打包的id为prod的profile
 
 
+# 网关问题
+## 手动注入到nacos
+需要注意如何获取ip地址
+https://github.com/chywx/spring-boot-chy/tree/rigister-nacos/chy-socketio
 
 # 版本对应关系
 https://blog.csdn.net/weixin_43702146/article/details/127302612
 
 
-# nacos配置
+# nacos
+## 配置内容
+项目目录的doc文件夹下
+## 配置说明
 https://blog.csdn.net/u014087208/article/details/108364510
