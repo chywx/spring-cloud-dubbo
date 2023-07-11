@@ -43,3 +43,10 @@ https://blog.csdn.net/weixin_43702146/article/details/127302612
 项目目录的doc文件夹下
 ## 配置说明
 https://blog.csdn.net/u014087208/article/details/108364510
+
+
+# 服务关系
+log服务是提供者，但是也暴露了web端口
+message也是提供者，没有暴露web端口
+lucky是consumer，服务调用者
+gateway是网关

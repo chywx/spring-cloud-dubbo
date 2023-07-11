@@ -4,6 +4,6 @@ import cn.chendahai.entity.UserInfo;
 
 public interface UserInfoService {
 
-    public UserInfo getUserInfo(Integer id);
+    UserInfo getById(Integer id);
 
 }
